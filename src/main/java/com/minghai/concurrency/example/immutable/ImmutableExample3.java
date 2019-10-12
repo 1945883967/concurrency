@@ -1,4 +1,4 @@
-package com.minghai.concurrency.immutable;
+package com.minghai.concurrency.example.immutable;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;

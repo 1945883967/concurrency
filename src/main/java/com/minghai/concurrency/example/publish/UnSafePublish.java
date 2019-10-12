@@ -1,4 +1,4 @@
-package com.minghai.concurrency.publish;
+package com.minghai.concurrency.example.publish;
 
 import com.minghai.concurrency.annotation.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;

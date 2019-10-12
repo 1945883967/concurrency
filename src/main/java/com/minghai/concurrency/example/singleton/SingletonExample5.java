@@ -1,7 +1,6 @@
-package com.minghai.concurrency.singleton;
+package com.minghai.concurrency.example.singleton;
 
 import com.minghai.concurrency.annotation.NotRecommend;
-import com.minghai.concurrency.annotation.NotThreadSafe;
 import com.minghai.concurrency.annotation.ThreadSafe;
 
 /**
