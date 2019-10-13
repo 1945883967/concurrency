@@ -1,21 +1,22 @@
 package com.minghai.concurrency.example.concurrent;
 
+import com.minghai.concurrency.annotation.NotThreadSafe;
 import com.minghai.concurrency.annotation.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.List;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.*;
 
 @Slf4j
 @ThreadSafe
-public class CopyOnWriteArraySetExample {
+public class ConcurrentHashMapExample {
     // 请求总数
     public static int clientTotal = 5000;
     // 同时并发执行的线程数
     public static int threadTotal = 200;
 
-    public  static Set<Integer> list = new CopyOnWriteArraySet<>();
+    public  static Map<Integer,Integer> map = new ConcurrentHashMap<>();
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -36,11 +37,11 @@ public class CopyOnWriteArraySetExample {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("count:{}",list.size());
+        log.info("count:{}",map.size());
 
     }
 
     public static void update(int i){
-        list.add(i);
+        map.put(i,i);
     }
 }
