@@ -11,8 +11,15 @@
 + [线程安全策略](https://github.com/1945883967/concurrency/blob/master/note/03%20线程安全策略.md)
 ## 代码
 + immutable 不可变对象
+
 + publish 安全发布
+
 + singleton
 
++ concurrent
 
- 
++ aqs
+
+
+
+
