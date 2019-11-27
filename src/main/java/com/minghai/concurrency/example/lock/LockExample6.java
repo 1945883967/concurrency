@@ -8,6 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class LockExample6 {
 
+
     public static void main(String[] args) {
         ReentrantLock reentrantLock = new ReentrantLock();
         Condition condition = reentrantLock.newCondition();
